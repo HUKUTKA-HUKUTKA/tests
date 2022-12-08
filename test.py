@@ -28,7 +28,7 @@ class Test_KAJIbKyJI9TOP:
         assert lib.KAJIbKyJI9TOP(5, 2, '-') == 3
 
     def test_3(self):
-        assert lib.KAJIbKyJI9TOP(6, 3, '*') == 12
+        assert lib.KAJIbKyJI9TOP(6, 3, '*') == 18
 
     def test_4(self):
         assert lib.KAJIbKyJI9TOP(6, 3, '/') == 2
@@ -36,5 +36,8 @@ class Test_KAJIbKyJI9TOP:
     def test_5(self):
         with pytest.raises(AssertionError):
             assert lib.KAJIbKyJI9TOP( 3, '+', 4)
+
+    def test_4(self):
+        assert lib.KAJIbKyJI9TOP(6, "aab", 3) == None
 
 
